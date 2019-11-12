@@ -17,7 +17,7 @@ def load():
 
     # load train data
     for i in range(1, 6):
-        with open('data/data_batch_' + str(i), 'rb') as f:
+        with open('../data/data_batch_' + str(i), 'rb') as f:
             d = pickle.load(f, encoding='bytes')
             data = d[b'data']
             data = np.reshape(data, (10000, 3, 32, 32))
@@ -31,7 +31,7 @@ def load():
                 train_labels = np.concatenate([train_labels, labels])
 
     # load test data
-    with open('data/test_batch', 'rb') as f:
+    with open('../data/test_batch', 'rb') as f:
         d = pickle.load(f, encoding='bytes')
         data = d[b'data']
         data = np.reshape(data, (10000, 3, 32, 32))
