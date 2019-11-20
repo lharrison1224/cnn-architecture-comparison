@@ -106,4 +106,4 @@ venv.bak/
 .DS_Store
 
 # Weight Checkpoint Files
-.hdf5
+*.hdf5
